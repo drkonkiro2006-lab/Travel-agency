@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Destinations | Midnight Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2ca50",
+                        "tertiary": "#bfcdff",
+                        "surface-tint": "#e9c349",
+                        "on-secondary": "#313030",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-container-highest": "#353534",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary": "#c8c6c5",
+                        "inverse-primary": "#735c00",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "on-primary-fixed": "#241a00",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-container": "#554300",
+                        "on-surface": "#e5e2e1",
+                        "secondary-container": "#4a4949",
+                        "on-surface-variant": "#d0c5af",
+                        "surface-variant": "#353534",
+                        "on-background": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#bab8b7",
+                        "background": "#131313",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container": "#201f1f",
+                        "tertiary-container": "#97b0ff",
+                        "on-secondary-fixed-variant": "#474646",
+                        "outline": "#99907c",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-tertiary-fixed": "#00174b",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed": "#ffe088",
+                        "on-error": "#690005",
+                        "surface-dim": "#131313",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "surface": "#131313",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary": "#082b72",
+                        "on-tertiary-container": "#254188",
+                        "outline-variant": "#4d4635",
+                        "primary-container": "#d4af37",
+                        "tertiary-fixed": "#dbe1ff",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#3c2f00",
+                        "secondary-fixed": "#e5e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F2CA50 100%);
+        }
+        .midnight-glow {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        .text-glow:hover {
+            text-shadow: 0 0 15px rgba(242, 202, 80, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-[#201F1F]/60 backdrop-blur-md flex justify-between items-center px-12 py-6 w-full mx-auto shadow-2xl shadow-black/50">
+<div class="text-2xl font-serif italic text-[#D4AF37] tracking-widest">Midnight Curator</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300 font-label text-[10px] uppercase tracking-[0.2em]" href="#">Home</a>
+<a class="text-[#F2CA50] border-b-2 border-[#D4AF37] pb-1 font-bold font-label text-[10px] uppercase tracking-[0.2em]" href="#">Destinations</a>
+<a class="text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300 font-label text-[10px] uppercase tracking-[0.2em]" href="#">Packages</a>
+<a class="text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300 font-label text-[10px] uppercase tracking-[0.2em]" href="#">About</a>
+<a class="text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300 font-label text-[10px] uppercase tracking-[0.2em]" href="#">Contact</a>
+</div>
+<button class="gold-gradient text-on-primary-fixed px-8 py-3 font-label text-[10px] uppercase tracking-widest font-bold hover:scale-105 transition-transform duration-300 ease-out shadow-lg">
+            Book Now
+        </button>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-background z-10"></div>
+<img alt="Hero Background" class="absolute inset-0 w-full h-full object-cover scale-105" data-alt="Dramatic mountain peaks at twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw1aSJJMd9qZ7VfEgBLaJoyxP5FwL-gX1tfruJ-zMMO0YeaXydp0oWx8zdo9cGhvH6_ekluglN-AHXNf0oWIH1LD43jQ4MysbN0B3JZY6y47rwOJU8sEtAM2AwA1P3u2IyXKeVPFEa9IcwPgcegX5jPbQENZ2EPo5MbtawlHnvuzu_NvBAmsCe63B5vUa7oLdLQ1XvKpwd-wq4f_FYtIeMC3kXqNIsKShIdK6VUcYg-HJeMlYRH_9M12YP_LLw9w3GJ2-vsCManLur"/>
+<div class="relative z-20 text-center space-y-6 px-4">
+<span class="font-label text-primary tracking-[0.4em] uppercase text-[12px] block mb-2">Curated Anthology</span>
+<h1 class="font-headline text-7xl md:text-9xl text-on-surface font-light tracking-tight">The Global <span class="italic font-normal">Collection</span></h1>
+<p class="max-w-2xl mx-auto text-on-surface-variant font-light text-lg leading-relaxed">
+                    A definitive anthology of evocative landscapes, hand-selected for the discerning wanderer.
+                </p>
+</div>
+</section>
+<!-- Filter Shell -->
+<section class="max-w-7xl mx-auto px-6 -mt-16 relative z-30">
+<div class="bg-surface-container p-8 md:p-12 shadow-2xl midnight-glow flex flex-col md:flex-row gap-12 items-end">
+<div class="flex-1 space-y-4 w-full">
+<label class="font-label text-[10px] uppercase tracking-widest text-primary">Region</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<button class="px-6 py-3 border border-outline-variant/30 text-sm hover:border-primary transition-colors text-left bg-surface-container-lowest">All Regions</button>
+<button class="px-6 py-3 border border-outline-variant/30 text-sm hover:border-primary transition-colors text-left bg-surface-container-lowest">Europe</button>
+<button class="px-6 py-3 border border-outline-variant/30 text-sm hover:border-primary transition-colors text-left bg-surface-container-lowest">Asia Pacific</button>
+<button class="px-6 py-3 border border-outline-variant/30 text-sm hover:border-primary transition-colors text-left bg-surface-container-lowest">Mediterranean</button>
+</div>
+</div>
+<div class="flex-1 space-y-4 w-full">
+<label class="font-label text-[10px] uppercase tracking-widest text-primary">Experience</label>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<button class="px-6 py-3 border border-outline-variant/30 text-sm hover:border-primary transition-colors text-left bg-surface-container-lowest">Adventure</button>
+<button class="px-6 py-3 border border-outline-variant/30 text-sm hover:border-primary transition-colors text-left bg-surface-container-lowest">Wellness</button>
+<button class="px-6 py-3 border border-outline-variant/30 text-sm hover:border-primary transition-colors text-left bg-surface-container-lowest">Culinary</button>
+</div>
+</div>
+<button class="gold-gradient p-4 text-on-primary-fixed hover:scale-105 transition-transform shrink-0">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</section>
+<!-- Featured Destinations (Asymmetric) -->
+<section class="py-32 px-6 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row gap-20 items-center mb-32">
+<div class="w-full md:w-3/5 group cursor-pointer relative overflow-hidden">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 z-10"></div>
+<img alt="Dolomites" class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Rugged peaks of the Dolomites Italy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC260S8Xc-OsPatklM99BZ0opFC6s7RsU22b6T6fruiuICuIT4d9S8Kw5_j5c2Jg2Rb1Smkc4IanYhqcdjT0KgkN-kTD6oqwpLlHZhWrjtD8PqKy9o40lAoBalEdBUZS2hvEVXah6mtm5vfWqdUF9SXWJfIFtr9WAhWY_EOLIwgz1-kj9Xl3ORUhmOc5DbumqKUowpDKPRssl_c99Sn-rqDKBKrCP5Qb4iuwnUiKZR-Od_gL0xjPA-qAGqhXiSXAhzm1pVPfXwVhlz7"/>
+<div class="absolute bottom-8 left-8 z-20">
+<span class="font-label text-xs tracking-widest text-primary uppercase">Featured Destination</span>
+<h3 class="font-headline text-4xl text-white mt-2">Dolomites, <span class="italic">Italy</span></h3>
+</div>
+</div>
+<div class="w-full md:w-2/5 space-y-8">
+<div class="space-y-4">
+<h4 class="font-label text-[10px] uppercase tracking-[0.3em] text-outline">01 / Alpine Mastery</h4>
+<p class="text-on-surface-variant text-lg leading-relaxed font-light">
+                            Witness the dramatic interplay of light and limestone. Our Dolomites collection offers exclusive access to hidden rifugios and private helicopter crossings.
+                        </p>
+</div>
+<button class="text-primary font-label text-xs uppercase tracking-widest border-b border-primary/30 pb-2 hover:border-primary transition-colors">View Itinerary</button>
+</div>
+</div>
+<div class="flex flex-col md:flex-row-reverse gap-20 items-center">
+<div class="w-full md:w-3/5 group cursor-pointer relative overflow-hidden">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 z-10"></div>
+<img alt="Baa Atoll" class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Turquoise waters of Baa Atoll Maldives" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQLRUimbUNYGJsfrflXznxzfC11sIRcZ5E3soxrMrag1GVWGTZSmYnYejWcU1x_MM1CX5XzlYjL41XKA772zAdM6Cm6TYd1-bRyAqOzs1gonTC1GTPIKU0y-JftjnkAo29ErnAgMJhewoDjy8nnuThYEpYabAXAcy5tZwgay6b8QcxkZGno4rqy2fnUMF3GjQG7MLDGMXM00wATx37CmVGafZAuwZS9JMTEDbL5zP9nfARuECNIES3pd6Il_x-Tm7Zw8GmpTywcR-V"/>
+<div class="absolute bottom-8 right-8 text-right z-20">
+<span class="font-label text-xs tracking-widest text-primary uppercase">Featured Destination</span>
+<h3 class="font-headline text-4xl text-white mt-2">Baa Atoll, <span class="italic">Maldives</span></h3>
+</div>
+</div>
+<div class="w-full md:w-2/5 space-y-8">
+<div class="space-y-4">
+<h4 class="font-label text-[10px] uppercase tracking-[0.3em] text-outline">02 / Marine Sanctuary</h4>
+<p class="text-on-surface-variant text-lg leading-relaxed font-light">
+                            A UNESCO Biosphere Reserve where the ocean's depth meets absolute luxury. Private villas suspended over crystal stillness.
+                        </p>
+</div>
+<button class="text-primary font-label text-xs uppercase tracking-widest border-b border-primary/30 pb-2 hover:border-primary transition-colors">Explore Villas</button>
+</div>
+</div>
+</section>
+<!-- Bento Grid Collections -->
+<section class="py-32 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-6">
+<header class="mb-20 text-center">
+<h2 class="font-headline text-5xl mb-4">The Global Grid</h2>
+<div class="h-px w-24 bg-primary/30 mx-auto"></div>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-[1000px] md:h-[800px]">
+<!-- Kyoto -->
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-container shadow-2xl transition-transform duration-500 hover:scale-[1.02] hover:z-40">
+<img alt="Kyoto" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" data-alt="Zen temple in Kyoto during autumn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbd-gfglyPCkVQFu57XhoUe9ubZI2C50c4wNt1lHBAZiz0IxEUvzgsyy-uzl4QcIdYVOfpaimAqDxJCa_cHHc1YojopI7I6AlSeRMo0AuyFvdZLgP-zj9vYjuGbzvd3B_MOOZn1_Wlp0GUXYr0dfZIAeHsAYuB6bY-0Tu1xk5wmc10WLZeGx_BFWqkbLB-V8T0l3JHAL-a6ufv9hQReiQXTgndcI4omXNIL4DT3DY-JaUjWARd2bEAxdN7r1hDQAqIk9FFfe-oytXg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-10 left-10 space-y-2">
+<span class="font-label text-[10px] text-primary tracking-widest uppercase">Cultural Heritage</span>
+<h4 class="font-headline text-4xl">Kyoto, <span class="italic font-light">Japan</span></h4>
+</div>
+</div>
+<!-- Paris -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-container shadow-2xl transition-transform duration-500 hover:scale-[1.02] hover:z-40">
+<img alt="Paris" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" data-alt="Eiffel Tower at night with city lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP888gsky9R35Jm_hHFm6WKpBQUGz8CumAdOxO50Vtt5xdNmknWats0tKEaAre-OiMTT62GrOvBzFlg-vj9xbQDFywI5F47aEspShJqLAQ6BOhbL3gNbWRQOopFS75CBgbjERUwbe1Zmk5FjJq3GS7FCoHVYyRoxcEjc5OY5OBHq16y8dbevK7YuB9XpnCslX9uCHXYa__VHLDFemdBuGmhrqVw-rRgZ4kv7FpoSsTaesahamZhkojsm3qZircMy5McNJmub6oAhWb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-10 left-10 space-y-2">
+<span class="font-label text-[10px] text-primary tracking-widest uppercase">Gastronomy</span>
+<h4 class="font-headline text-3xl">Paris, <span class="italic font-light">France</span></h4>
+</div>
+</div>
+<!-- Santorini -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-container shadow-2xl transition-transform duration-500 hover:scale-[1.02] hover:z-40">
+<img alt="Santorini" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" data-alt="Whitewashed buildings of Oia Santorini" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnOTk0SzfnbfBAYpWSGy_A6kf_UN2wOCQSiCakZqLJguZVD8_J9Pk7R-dOMOHw71pVpd51VyobGelK733f77UiE-IutHiJLCVHzfnhlI2N_VmkOuT6Xl9oiz8176EduFc3pXFpl2xhIEw08wxUWAWXwXQHcp4MD45CqYDnXsCZDK1ViqzALEfhI6qaYYi9kDfevikOcO-GN8Mgsw8dzCboE0iR-EE5mg0vEFkuA0_EW_f0DF2sb5wiRPCBAjuJM8LUdLErjE45xUI1"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-10 left-10 space-y-2">
+<span class="font-label text-[10px] text-primary tracking-widest uppercase">Seascape</span>
+<h4 class="font-headline text-3xl">Santorini, <span class="italic font-light">Greece</span></h4>
+</div>
+</div>
+<!-- Patagonia -->
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-container shadow-2xl transition-transform duration-500 hover:scale-[1.02] hover:z-40">
+<img alt="Patagonia" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" data-alt="Glacial peaks and blue lakes in Patagonia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDctK-Ps5pBJVgOes_mPNL814UmdnXY9c3E8UtbGf-yGCsi32Arkn3LXe-kzFaPVHwUhtZ_frO-z2y0BxeiCtDzdBnPuqReGL0-R66VJhywRqCaZhlUCCp0vf4cD996X_x6226H4X7RpG16oL-otkboz6hpKrZFWCnYwUG9eeYOkiSkcbQeYnS09BWzeTjd3Bq13W55IBi11NItdv8uN-jEA37zmxZsCPayiheO5GZsP5ellUYv0Yx73fEzeSBLygj4AbMRLyxC_0Pb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-10 left-10 space-y-2">
+<span class="font-label text-[10px] text-primary tracking-widest uppercase">Untamed Wilderness</span>
+<h4 class="font-headline text-4xl">Patagonia, <span class="italic font-light">Chile</span></h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-40 relative overflow-hidden">
+<div class="absolute inset-0 bg-surface"></div>
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10 space-y-12">
+<h2 class="font-headline text-5xl md:text-7xl">Where shall we <span class="italic">begin?</span></h2>
+<p class="text-on-surface-variant text-xl font-light">
+                    Every journey begins with a single selection. Our curators are ready to design your definitive itinerary.
+                </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="gold-gradient text-on-primary-fixed px-12 py-5 font-label text-sm uppercase tracking-[0.2em] font-bold hover:scale-105 transition-transform duration-300 shadow-2xl">
+                        Enquire Today
+                    </button>
+<button class="px-12 py-5 border border-primary/30 font-label text-sm uppercase tracking-[0.2em] hover:bg-surface-container transition-colors">
+                        View Lookbook
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#4D4635]/15 bg-[#0E0E0E] dark:bg-surface-container-lowest grid grid-cols-1 md:grid-cols-4 gap-12 px-16 py-20 w-full">
+<div class="space-y-6">
+<div class="text-xl font-serif text-[#F2CA50] uppercase tracking-tighter">Midnight Curator</div>
+<p class="text-[#D0C5AF]/70 text-sm leading-relaxed">
+                Architecting travel experiences that exist beyond the ordinary. Curated for the nocturnal, the bold, and the refined.
+            </p>
+</div>
+<div class="space-y-6">
+<h5 class="font-headline text-primary text-sm tracking-widest uppercase">Destinations</h5>
+<ul class="space-y-4 font-body text-sm">
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 inline-block" href="#">Alps &amp; Dolomites</a></li>
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 inline-block" href="#">Azure Islands</a></li>
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 inline-block" href="#">Eastern Zen</a></li>
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 inline-block" href="#">Polar Frontiers</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-headline text-primary text-sm tracking-widest uppercase">Company</h5>
+<ul class="space-y-4 font-body text-sm">
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 inline-block" href="#">Careers</a></li>
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 inline-block" href="#">Terms of Service</a></li>
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 inline-block" href="#">FAQ</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-headline text-primary text-sm tracking-widest uppercase">Social</h5>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant/30 hover:border-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant/30 hover:border-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">camera_enhance</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant/30 hover:border-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">travel_explore</span>
+</a>
+</div>
+<p class="text-[#D0C5AF]/50 text-[10px] pt-4 uppercase tracking-widest">
+                © 2024 Midnight Curator Travel. All rights reserved.
+            </p>
+</div>
+</footer>
+</body></html>

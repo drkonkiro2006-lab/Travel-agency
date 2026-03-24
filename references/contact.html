@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | Midnight Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2ca50",
+                        "tertiary": "#bfcdff",
+                        "surface-tint": "#e9c349",
+                        "on-secondary": "#313030",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-container-highest": "#353534",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary": "#c8c6c5",
+                        "inverse-primary": "#735c00",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "on-primary-fixed": "#241a00",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-container": "#554300",
+                        "on-surface": "#e5e2e1",
+                        "secondary-container": "#4a4949",
+                        "on-surface-variant": "#d0c5af",
+                        "surface-variant": "#353534",
+                        "on-background": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#bab8b7",
+                        "background": "#131313",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container": "#201f1f",
+                        "tertiary-container": "#97b0ff",
+                        "on-secondary-fixed-variant": "#474646",
+                        "outline": "#99907c",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-tertiary-fixed": "#00174b",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed": "#ffe088",
+                        "on-error": "#690005",
+                        "surface-dim": "#131313",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "surface": "#131313",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary": "#082b72",
+                        "on-tertiary-container": "#254188",
+                        "outline-variant": "#4d4635",
+                        "primary-container": "#d4af37",
+                        "tertiary-fixed": "#dbe1ff",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#3c2f00",
+                        "secondary-fixed": "#e5e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(32, 31, 31, 0.6);
+            backdrop-filter: blur(12px);
+        }
+        .metallic-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #f2ca50 100%);
+        }
+        .midnight-glow {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-[#201F1F]/60 backdrop-blur-md shadow-2xl shadow-black/50">
+<div class="flex justify-between items-center px-12 py-6 w-full mx-auto">
+<div class="text-2xl font-serif italic text-[#D4AF37] tracking-widest">
+                Midnight Curator
+            </div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300 font-label text-[10px] uppercase tracking-[0.1em]" href="#">Home</a>
+<a class="text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300 font-label text-[10px] uppercase tracking-[0.1em]" href="#">Destinations</a>
+<a class="text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300 font-label text-[10px] uppercase tracking-[0.1em]" href="#">Packages</a>
+<a class="text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300 font-label text-[10px] uppercase tracking-[0.1em]" href="#">About</a>
+<a class="text-[#F2CA50] border-b-2 border-[#D4AF37] pb-1 font-bold font-label text-[10px] uppercase tracking-[0.1em]" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-8 py-2 text-[10px] font-bold uppercase tracking-[0.2em] hover:scale-105 transition-transform duration-300 ease-out shadow-lg shadow-primary/20">
+                Book Now
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 md:px-12 lg:px-24">
+<!-- Hero Title Section -->
+<header class="mb-24 flex flex-col items-center text-center">
+<span class="font-label text-primary text-[11px] uppercase tracking-[0.3em] mb-4">Inquiry &amp; Concierge</span>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-on-surface leading-tight">
+                Craft Your <br/> <span class="italic font-normal text-primary">Legacy Journey</span>
+</h1>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Contact Form Section (Bento Inspired) -->
+<div class="lg:col-span-7 space-y-12">
+<div class="glass-panel p-10 md:p-16 rounded-xl border border-outline-variant/15 midnight-glow">
+<form action="#" class="space-y-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative group">
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-3 block">Full Name</label>
+<input class="w-full bg-surface-container-lowest border-none border-b border-outline-variant/30 focus:ring-0 focus:border-primary text-on-surface placeholder:text-outline-variant/40 py-4 transition-all duration-300" placeholder="ALEXANDER VANE" type="text"/>
+</div>
+<div class="relative group">
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-3 block">Email Address</label>
+<input class="w-full bg-surface-container-lowest border-none border-b border-outline-variant/30 focus:ring-0 focus:border-primary text-on-surface placeholder:text-outline-variant/40 py-4 transition-all duration-300" placeholder="A.VANE@CURATOR.COM" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative group">
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-3 block">Interest</label>
+<select class="w-full bg-surface-container-lowest border-none border-b border-outline-variant/30 focus:ring-0 focus:border-primary text-on-surface py-4 transition-all duration-300">
+<option>PRIVATE EXPEDITION</option>
+<option>ART CURATION</option>
+<option>ESTATE RETREAT</option>
+</select>
+</div>
+<div class="relative group">
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-3 block">Timeline</label>
+<input class="w-full bg-surface-container-lowest border-none border-b border-outline-variant/30 focus:ring-0 focus:border-primary text-on-surface placeholder:text-outline-variant/40 py-4 transition-all duration-300" placeholder="Q4 2024" type="text"/>
+</div>
+</div>
+<div class="relative group">
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-3 block">The Vision</label>
+<textarea class="w-full bg-surface-container-lowest border-none border-b border-outline-variant/30 focus:ring-0 focus:border-primary text-on-surface placeholder:text-outline-variant/40 py-4 transition-all duration-300 resize-none" placeholder="DESCRIBE THE UNFORGETTABLE..." rows="4"></textarea>
+</div>
+<button class="metallic-gold text-on-primary-fixed px-12 py-5 font-bold uppercase tracking-[0.25em] text-[11px] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center w-full md:w-auto shadow-2xl shadow-primary/30" type="submit">
+                            Submit Inquiry
+                            <span class="material-symbols-outlined ml-3 text-[18px]">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Concierge & Locations Section -->
+<div class="lg:col-span-5 space-y-16">
+<!-- Concierge High Contrast Image -->
+<div class="relative group overflow-hidden rounded-xl h-80 shadow-2xl shadow-black/60">
+<img class="absolute inset-0 w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-700 ease-out" data-alt="Close-up of a luxury hotel concierge desk with golden keys" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkZJm4hrTnhxte4mrbQlbe6q-kMgIGf7XkwB-PEiX5-vGqyOGe1sQdEC9806jpsR37W2A4-xa64JfM9CWZn6bbBa6CKYx_j2GUQ9DG5S_euDQVT5ewwrcZwHD09Zc8njjX74UvOYPjwSNjVmfBrwx0kth55j2rIn_nNrsAB9kTBg31P7ry0Wx1W2fa4Ldh6i2HPqPfHltpzd0sf8AGmYlgv36K0AbPr4R91JLTn2p-tRUIF2fWqHIZ3Nz3l-GsreTeqjSSg5-R-teJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<span class="font-label text-[9px] uppercase tracking-[0.4em] text-primary block mb-2">Available 24/7</span>
+<h3 class="font-headline text-2xl font-bold">The Midnight Concierge</h3>
+</div>
+</div>
+<!-- Locations Grid -->
+<div class="space-y-12 pl-4 border-l border-outline-variant/20">
+<div class="space-y-4">
+<h4 class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Global Reach</h4>
+<div class="flex items-start space-x-6">
+<div class="p-3 bg-surface-container-high rounded-lg text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-outline mb-1">Direct Line</p>
+<p class="font-headline text-lg">+44 (0) 20 7946 0852</p>
+</div>
+</div>
+<div class="flex items-start space-x-6">
+<div class="p-3 bg-surface-container-high rounded-lg text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-outline mb-1">Electronic Post</p>
+<p class="font-headline text-lg">concierge@midnightcurator.com</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8 pt-8">
+<div class="space-y-2">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-primary">London Atelier</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Mayfair, W1K 2HB<br/>United Kingdom</p>
+<img class="w-full h-1 w-full mt-4 opacity-30 grayscale" data-alt="Subtle map outline of London district" data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbIsztm2BFL_Diu6Jzd3r_35vui8Y9lXwlsUDR31CE0TPlwdDEYUQEIrjIuy7DJsNdcIovyLZlqYw_GXbXi4_dqKQQa4IA_RBp_EwjIAKAmTKn0OtDq9kDM2XmS86JEOGVmJv-sQTlSWJRUlr97Tsd19sqYdE2I_yPGF5JRFdUk8pqxYB_lasJAiLteCN9sgaOkAkwKnoeWILQBgiS60cSPqKgJrUsQWvClRA652mYlzn8RIs7i-m0oz7FoCcJ3d32FiLC53H2Ppde"/>
+</div>
+<div class="space-y-2">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-primary">Zurich Bureau</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Bahnhofstrasse 1<br/>8001 Switzerland</p>
+<img class="w-full h-1 w-full mt-4 opacity-30 grayscale" data-alt="Subtle map outline of Zurich city" data-location="Zurich" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBfRgcrcsYCfjjKj7Zi5zwn97uvA5GAP-KVazx5mJEEe_MX98JcWWkWJESZebwBZnBkTP2gFcsPXmpkgF__VNtppfa1MXsLN7Nq6wKnO2sKOMLcAGf74dBL35tC-ypVlO7Po-PtuI75nGOQyzAcXb0kio2o6ewJQlYV2sgv9A4rgW-JfrCbcVGrRFvoN9DwEWfMJuSjukGybqCyWPvA6lyB_Rrg2T4A1UsHI8pMBUSB4PfH-87fC2CoxwOQRiHW_64j15_N7TJyB-0"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Quote / Ambient Section -->
+<section class="mt-40 border-t border-outline-variant/10 pt-20 text-center">
+<p class="font-headline italic text-2xl text-on-surface-variant/60 max-w-2xl mx-auto leading-relaxed">
+                "The night does not hide life; it reveals the essence of it for those who know where to look."
+            </p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0E0E0E] dark:bg-surface-container-lowest w-full border-t border-[#4D4635]/15">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-16 py-20 w-full">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-serif text-[#F2CA50] uppercase tracking-tighter mb-6">
+                    Midnight Curator
+                </div>
+<p class="font-body text-[#D0C5AF]/70 text-sm leading-relaxed max-w-xs">
+                    Curating the world's most exclusive nocturnal experiences since 1994.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="font-headline text-[#D4AF37] text-sm mb-2">Experiences</h5>
+<a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 font-body text-sm" href="#">Arctic Aurora</a>
+<a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 font-body text-sm" href="#">Midnight Safari</a>
+<a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 font-body text-sm" href="#">Urban Shadows</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="font-headline text-[#D4AF37] text-sm mb-2">Navigation</h5>
+<a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 font-body text-sm" href="#">Careers</a>
+<a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 font-body text-sm" href="#">FAQ</a>
+<a class="text-[#F2CA50] underline underline-offset-4 font-body text-sm" href="#">Contact</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="font-headline text-[#D4AF37] text-sm mb-2">Legal</h5>
+<a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 font-body text-sm" href="#">Privacy Policy</a>
+<a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 font-body text-sm" href="#">Terms of Service</a>
+<div class="pt-6 flex space-x-4">
+<span class="material-symbols-outlined text-[#D4AF37] cursor-pointer hover:scale-110 transition-transform">public</span>
+<span class="material-symbols-outlined text-[#D4AF37] cursor-pointer hover:scale-110 transition-transform">shield</span>
+</div>
+</div>
+</div>
+<div class="px-16 py-8 border-t border-outline-variant/10 text-center">
+<p class="text-[#D0C5AF]/40 font-body text-[10px] uppercase tracking-widest">
+                © 2024 Midnight Curator Travel. All rights reserved.
+            </p>
+</div>
+</footer>
+</body></html>

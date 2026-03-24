@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2ca50",
+              "tertiary": "#bfcdff",
+              "surface-tint": "#e9c349",
+              "on-secondary": "#313030",
+              "primary-fixed-dim": "#e9c349",
+              "surface-container-highest": "#353534",
+              "surface-container-high": "#2a2a2a",
+              "secondary": "#c8c6c5",
+              "inverse-primary": "#735c00",
+              "error": "#ffb4ab",
+              "surface-container-lowest": "#0e0e0e",
+              "tertiary-fixed-dim": "#b4c5ff",
+              "on-primary-fixed": "#241a00",
+              "surface-container-low": "#1c1b1b",
+              "on-primary-container": "#554300",
+              "on-surface": "#e5e2e1",
+              "secondary-container": "#4a4949",
+              "on-surface-variant": "#d0c5af",
+              "surface-variant": "#353534",
+              "on-background": "#e5e2e1",
+              "error-container": "#93000a",
+              "on-secondary-container": "#bab8b7",
+              "background": "#131313",
+              "secondary-fixed-dim": "#c8c6c5",
+              "surface-container": "#201f1f",
+              "tertiary-container": "#97b0ff",
+              "on-secondary-fixed-variant": "#474646",
+              "outline": "#99907c",
+              "on-secondary-fixed": "#1c1b1b",
+              "inverse-surface": "#e5e2e1",
+              "on-primary-fixed-variant": "#574500",
+              "on-tertiary-fixed": "#00174b",
+              "inverse-on-surface": "#313030",
+              "primary-fixed": "#ffe088",
+              "on-error": "#690005",
+              "surface-dim": "#131313",
+              "on-tertiary-fixed-variant": "#27438a",
+              "surface": "#131313",
+              "surface-bright": "#3a3939",
+              "on-tertiary": "#082b72",
+              "on-tertiary-container": "#254188",
+              "outline-variant": "#4d4635",
+              "primary-container": "#d4af37",
+              "tertiary-fixed": "#dbe1ff",
+              "on-error-container": "#ffdad6",
+              "on-primary": "#3c2f00",
+              "secondary-fixed": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .font-noto-serif { font-family: 'Noto Serif', serif; }
+      .inter { font-family: 'Inter', sans-serif; }
+      .text-glow { text-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
+      .midnight-gradient { background: linear-gradient(135deg, #D4AF37 0%, #F2CA50 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-[#201F1F]/60 backdrop-blur-md shadow-2xl shadow-black/50">
+<div class="flex justify-between items-center px-12 py-6 w-full mx-auto">
+<div class="text-2xl font-serif italic text-[#D4AF37] tracking-widest">Midnight Curator</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="inter text-xs tracking-[0.2em] uppercase text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300" href="#">Home</a>
+<a class="inter text-xs tracking-[0.2em] uppercase text-[#F2CA50] border-b-2 border-[#D4AF37] pb-1 font-bold" href="#">About</a>
+<a class="inter text-xs tracking-[0.2em] uppercase text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300" href="#">Destinations</a>
+<a class="inter text-xs tracking-[0.2em] uppercase text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300" href="#">Packages</a>
+<a class="inter text-xs tracking-[0.2em] uppercase text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-fixed font-label text-xs uppercase tracking-widest px-8 py-3 hover:scale-105 transition-transform duration-300 ease-out shadow-lg shadow-primary/20">
+                Book Now
+            </button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-32">
+<!-- Hero Section / Aethelgard Global -->
+<section class="px-12 py-24 md:py-40 flex flex-col items-center text-center">
+<span class="inter text-xs tracking-[0.4em] uppercase text-primary mb-6">Established 1924</span>
+<h1 class="font-headline text-5xl md:text-8xl text-on-surface tracking-tight leading-tight">Aethelgard Global</h1>
+<p class="mt-8 max-w-2xl font-body text-on-surface-variant text-lg leading-relaxed opacity-80">
+                Crafting the world's most exclusive travel narratives for a century. We operate in the silence between the moments, curating excellence for those who value time above all.
+            </p>
+</section>
+<!-- Our Legacy & The Philosophy -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/15">
+<div class="bg-surface-container-low p-12 md:p-24 flex flex-col justify-center">
+<h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-8">Our Legacy</h2>
+<div class="space-y-6 text-on-surface-variant leading-relaxed font-body">
+<p>Founded on the principles of discretion and architectural travel, Aethelgard began as a private concierge service for the European elite. Over ten decades, we have evolved into a global sentinel of luxury.</p>
+<p>Our history is not written in brochures, but in the whispered testimonials of heads of state, industry titans, and visionaries who require more than just a destination—they require a sanctuary.</p>
+</div>
+</div>
+<div class="bg-surface-container p-12 md:p-24 flex flex-col justify-center relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-primary/5 blur-[100px]"></div>
+<h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-8">The Philosophy</h2>
+<div class="space-y-12">
+<div class="flex gap-6 group">
+<span class="material-symbols-outlined text-primary text-3xl shrink-0" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div>
+<h3 class="inter text-sm uppercase tracking-widest text-on-surface mb-2 font-bold">Absolute Trust</h3>
+<p class="text-on-surface-variant text-sm">We operate with the highest tier of encryption and human discretion. Your privacy is our paramount asset.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<span class="material-symbols-outlined text-primary text-3xl shrink-0" data-icon="language" style="font-variation-settings: 'FILL' 1;">language</span>
+<div>
+<h3 class="inter text-sm uppercase tracking-widest text-on-surface mb-2 font-bold">Global Intuition</h3>
+<p class="text-on-surface-variant text-sm">Our network of local curators anticipates needs before they are voiced, providing seamless transitions across borders.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<span class="material-symbols-outlined text-primary text-3xl shrink-0" data-icon="diamond" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<div>
+<h3 class="inter text-sm uppercase tracking-widest text-on-surface mb-2 font-bold">Quiet Luxury</h3>
+<p class="text-on-surface-variant text-sm">Elegance that doesn't need to shout. We prioritize depth, authenticity, and rarity over flashy displays.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Founders Quote -->
+<section class="py-32 px-12 md:px-24 bg-surface-container-lowest text-center">
+<div class="max-w-4xl mx-auto">
+<span class="material-symbols-outlined text-outline-variant text-6xl mb-8 opacity-40" data-icon="format_quote">format_quote</span>
+<blockquote class="font-headline italic text-3xl md:text-5xl text-on-surface leading-snug">
+                    "True luxury is not found in the acquisition of things, but in the seamless curation of time and the quiet assurance of absolute belonging."
+                </blockquote>
+<cite class="mt-8 block inter text-sm uppercase tracking-[0.3em] text-primary not-italic">— Elias Aethelgard, Founder</cite>
+</div>
+</section>
+<!-- The Network (Map & Stats) -->
+<section class="relative bg-surface p-12 md:p-24 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+<img alt="Dark stylized world map with glowing nodes" class="w-full h-full object-cover grayscale brightness-50" data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8S1CrqPgJTtc6Qk_VQkHfYc9ZeKmLCCWPD_3egmU_1_GbQ_NnQJfhb3PLVHKnOdUvoMSpXtbxpsWYY4f7TL-Le3lp8akFme1VL32m_v5MZVkXXt5xp_assdkLF3W5Xb6NhMeW0TX88L9jP4EAIai8idqq1bmUi5dqNZzJZdKv-FvuzziXNiz9UGSKfT4MRI1-9OKOkchCElLbYWrLTplYD6cN2O6MehxLqj5jpLNd9tIBvX9jVAM4G5UeX8ibYYvO82Zj-byFJw_K"/>
+<div class="absolute inset-0 bg-radial-gradient(circle, transparent 20%, #131313 100%)"></div>
+</div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<span class="inter text-xs tracking-[0.4em] uppercase text-primary mb-6 block">Our Presence</span>
+<h2 class="font-headline text-4xl md:text-6xl text-on-surface mb-10">The Global Network</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-12">
+                        From the subterranean vaults of Zurich to the hidden villas of Kyoto, our reach is unrivaled. We maintain boots on the ground in over 80 countries, ensuring that Aethelgard standards are met wherever you land.
+                    </p>
+<div class="flex flex-wrap gap-16">
+<div class="flex flex-col">
+<span class="font-headline text-5xl text-primary text-glow">450+</span>
+<span class="inter text-xs uppercase tracking-widest text-outline mt-2">Private Assets</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline text-5xl text-primary text-glow">12k</span>
+<span class="inter text-xs uppercase tracking-widest text-outline mt-2">Curated Itineraries</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square bg-surface-container-high overflow-hidden shadow-2xl">
+<img alt="High-end private jet interior" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV08cjmnr4oVvcn1Y37kmV73ezqn4_Auyfwh0lR1EIK4vN_xWhOZzVRJ4VbPYElyDIIJCJNePacFEN4i3SDHKkso7aaV3DjspPxgYOZjrki6A2lbFTkY84X0MBAdIRInLNZ3Lh4OWn6xW06o_8VGGbKhoEVdkfMVdfRVf-9fpe0yOs-V0WKCXoYWWF_D6eFPhB0Qgly8nvPtXws9uGDaJIA-XhFYGGWk0wqVsotWvoAOrnWLosyrY56aXFkqkMV3Zx8JsjpDhkHQ3l"/>
+</div>
+<div class="aspect-square bg-surface-container-high overflow-hidden shadow-2xl translate-y-8">
+<img alt="Secluded island villa architecture" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc1xZ_JKZSvSSsEI3zNG1t9yUTvly5q6q62gFL2eUEL2jtF_KXydYs1ejV6BSd9xKSV3RwQ8GDFtZi8q_FQQC-ptEwaXyok8kCQPr85HV8GklcqaUYXtqxlU8TIjD_esDtCQbn2HlBGa250FSgd4DXyoCtYcZfISEqpKMRsfvXW8fVdwJkG3PCNW8Nb4W4Gca0roWoAb899z7LUFjJA9qSi4zUYwE1MwE7YdS1gWJ68ihng5r_QwrBqUFBew1-7_cviS5sNnAkYJod"/>
+</div>
+<div class="aspect-square bg-surface-container-high overflow-hidden shadow-2xl -translate-y-8">
+<img alt="Exclusive concierge service at night" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiHvM_vzwlUQIsz7Rf6fiYl5Jjt5h9s14p_mLIQK-YyYYC5R2mt_fsaXcD_OSny0P-X_QKqY9SiKKSnsVw39gHQ32_dGmZSAEVBvbn5rmOXOh-B-_MVTRQ22Aq5sNHBOKh00lzTcyznPJ0ig7RiylW6C3HGsNK-kqDWZrG2zmOMR3x951wXO8QPtxGbJjQOo_dj8TyGZzh1ZWi9VVYV-e1dgBvbo3bZNaWLhD1xeC4y4cz0yi-Fn5JAragjbZrvyIu_iPWxuHQr5-8"/>
+</div>
+<div class="aspect-square bg-surface-container-high overflow-hidden shadow-2xl">
+<img alt="Luxury yacht in midnight harbor" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbmh5eWWQBZ2g0RjmIkpKNsCH3wcqNx4fTmejePb3ZBN0uNeLUn-xmqnCy17rStkKCcTFh_kwGycGYkx-RHe88yMBb6XYj3QKVwrEWA-Tzglhtxb3oA0wTWJkowLkmiY2UC1yUjC0BIG6DnKSYzh_xevkENoBaEeKRD1i5q0qSMeEuno2MT2a2QpFu7ESLubV_wxFSRkI1KiwgJ7-IYFNzsTS_4xB5bD4uPyiv0R877xYhp89h5GT6jOboINewVU2d_7VOJGD2OtyC"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-12 py-32 text-center bg-primary-container/5">
+<h2 class="font-headline text-4xl text-on-surface mb-10">Step into the Midnight</h2>
+<button class="midnight-gradient text-on-primary-fixed font-label text-sm uppercase tracking-[0.2em] px-12 py-5 hover:scale-105 transition-transform duration-300 ease-out shadow-2xl shadow-primary/30">
+                Inquire for Membership
+            </button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0E0E0E] dark:bg-surface-container-lowest w-full border-t border-[#4D4635]/15">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-16 py-20 w-full">
+<div class="flex flex-col gap-6">
+<div class="text-xl font-serif text-[#F2CA50] uppercase tracking-tighter">Midnight Curator</div>
+<p class="text-on-surface-variant/70 text-sm leading-relaxed">
+                    Exclusivity redefined. Your journey begins where the sun sets.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-noto-serif text-[#D4AF37] mb-2 uppercase text-xs tracking-widest">Navigation</h4>
+<a class="inter text-sm text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300" href="#">Home</a>
+<a class="inter text-sm text-[#F2CA50] underline underline-offset-4" href="#">About</a>
+<a class="inter text-sm text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300" href="#">Destinations</a>
+<a class="inter text-sm text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300" href="#">Packages</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-noto-serif text-[#D4AF37] mb-2 uppercase text-xs tracking-widest">Concierge</h4>
+<a class="inter text-sm text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300" href="#">Privacy Policy</a>
+<a class="inter text-sm text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300" href="#">Terms of Service</a>
+<a class="inter text-sm text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300" href="#">FAQ</a>
+<a class="inter text-sm text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-noto-serif text-[#D4AF37] mb-2 uppercase text-xs tracking-widest">Connect</h4>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#D4AF37] cursor-pointer" data-icon="share">share</span>
+<span class="material-symbols-outlined text-[#D4AF37] cursor-pointer" data-icon="mail">mail</span>
+</div>
+<p class="text-xs text-on-surface-variant/50">© 2024 Midnight Curator Travel. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Curated Packages | Midnight Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2ca50",
+                        "tertiary": "#bfcdff",
+                        "surface-tint": "#e9c349",
+                        "on-secondary": "#313030",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-container-highest": "#353534",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary": "#c8c6c5",
+                        "inverse-primary": "#735c00",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "on-primary-fixed": "#241a00",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-container": "#554300",
+                        "on-surface": "#e5e2e1",
+                        "secondary-container": "#4a4949",
+                        "on-surface-variant": "#d0c5af",
+                        "surface-variant": "#353534",
+                        "on-background": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#bab8b7",
+                        "background": "#131313",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container": "#201f1f",
+                        "tertiary-container": "#97b0ff",
+                        "on-secondary-fixed-variant": "#474646",
+                        "outline": "#99907c",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-tertiary-fixed": "#00174b",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed": "#ffe088",
+                        "on-error": "#690005",
+                        "surface-dim": "#131313",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "surface": "#131313",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary": "#082b72",
+                        "on-tertiary-container": "#254188",
+                        "outline-variant": "#4d4635",
+                        "primary-container": "#d4af37",
+                        "tertiary-fixed": "#dbe1ff",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#3c2f00",
+                        "secondary-fixed": "#e5e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .midnight-glow {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f2ca50 100%);
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+        }
+        .card-3d-hover:hover {
+            transform: scale(1.02) translateY(-4px);
+            box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-[#201F1F]/60 backdrop-blur-md shadow-2xl shadow-black/50">
+<div class="flex justify-between items-center px-12 py-6 w-full mx-auto">
+<div class="text-2xl font-serif italic text-[#D4AF37] tracking-widest">
+                Midnight Curator
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label text-sm uppercase tracking-[0.1em] text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300 hover:scale-105" href="#">Home</a>
+<a class="font-label text-sm uppercase tracking-[0.1em] text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300 hover:scale-105" href="#">Destinations</a>
+<a class="font-label text-sm uppercase tracking-[0.1em] text-[#F2CA50] border-b-2 border-[#D4AF37] pb-1 font-bold hover:scale-105 transition-transform duration-300 ease-out" href="#">Packages</a>
+<a class="font-label text-sm uppercase tracking-[0.1em] text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300 hover:scale-105" href="#">About</a>
+<a class="font-label text-sm uppercase tracking-[0.1em] text-[#D0C5AF] hover:text-[#F2CA50] transition-colors duration-300 hover:scale-105" href="#">Contact</a>
+</div>
+<button class="gold-gradient text-on-primary font-label text-xs uppercase tracking-widest px-8 py-3 rounded shadow-lg hover:scale-105 transition-transform duration-300 ease-out font-bold">
+                Book Now
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-20">
+<!-- Hero Header -->
+<header class="px-12 mb-20">
+<span class="font-label text-sm uppercase tracking-[0.2em] text-primary mb-4 block">Exclusive Escapes</span>
+<h1 class="font-headline text-6xl md:text-8xl tracking-tight leading-none text-on-surface">Curated Collections</h1>
+<p class="max-w-2xl mt-8 text-on-surface-variant text-lg leading-relaxed font-light">
+                A selection of unparalleled journeys designed for the discerning explorer. Each collection is a masterpiece of logistics, luxury, and cultural immersion.
+            </p>
+</header>
+<!-- Featured Collections (Cinematic) -->
+<section class="px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32">
+<!-- The Maldivian Solitude -->
+<div class="group relative aspect-[16/10] overflow-hidden rounded-xl cursor-pointer">
+<img alt="The Maldivian Solitude" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Crystal clear blue Maldivian water over sand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf7pIpnDNijBFHB6IU6bsawqcFDphv2J9wYfnwG_qYIHxpXOSnZ7YomuVBCSr_UFQLdn1dprnxoDBOelmn0w_VcGY-4Agmo8P9GNhLSkXqMTwp1oLKTv9Xiro2KqFP8YSCnDK6tpbtSoMy77h7h_c5_Pv05--XMOkhW2ltUZA92orM_R1mUXJgUGLFTslc2mNS0EEN8hBsw-B5ioBCoWMX6rdhJVeg7aBamNcjIFLVHaXF59X2EsWjioLHG5zs_94ThtnZOFGTVJpX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+<div class="absolute bottom-10 left-10 right-10">
+<h2 class="font-headline text-4xl mb-4">The Maldivian Solitude</h2>
+<div class="flex justify-between items-end">
+<div class="space-y-2">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Private Villa • Hydroplane Transfers</span>
+<div class="text-[#D4AF37] font-headline text-2xl font-bold">$12,400 <span class="text-sm font-light text-on-surface-variant">/ per person</span></div>
+</div>
+<button class="gold-gradient text-on-primary font-label text-xs uppercase tracking-widest px-6 py-3 rounded-full hover:scale-105 transition-transform">
+                            Reserve Now
+                        </button>
+</div>
+</div>
+</div>
+<!-- Kyoto Reimagined -->
+<div class="group relative aspect-[16/10] overflow-hidden rounded-xl cursor-pointer">
+<img alt="Kyoto Reimagined" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Traditional Kyoto street with blooming cherry blossoms" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_gyuhPR1s4TxepkbYVXYHE6lnmHlUt_Njcz6BoGnPQtSANKQsSlpZ3aKZbElct0CT9vx-zq-zD7mrp6dymHIdMXHfD-FMO1oUPJ_HTiIWZlrjViAAe8rdOZK0MIOz2yndpq9s2v57oeooslNjQqiSGoMS5c0dpHq6DAnDOUNhdwax8z7qH3Jm6FYy4rhA7Puv6TMlctk2t-pYW7f9q6Q1DhrFEk8Z0OuIJJT8JJtLbCcFa33ZVlowaXxeeE5Iz2JHLl8YHOJA2pgm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+<div class="absolute bottom-10 left-10 right-10">
+<h2 class="font-headline text-4xl mb-4">Kyoto Reimagined</h2>
+<div class="flex justify-between items-end">
+<div class="space-y-2">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Ryokan Luxury • Private Tea Ceremony</span>
+<div class="text-[#D4AF37] font-headline text-2xl font-bold">$9,800 <span class="text-sm font-light text-on-surface-variant">/ per person</span></div>
+</div>
+<button class="gold-gradient text-on-primary font-label text-xs uppercase tracking-widest px-6 py-3 rounded-full hover:scale-105 transition-transform">
+                            Reserve Now
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Secondary Packages (Grid) -->
+<section class="px-12 mb-32">
+<div class="flex items-center justify-between mb-16">
+<h3 class="font-headline text-3xl">Signature Discoveries</h3>
+<div class="h-px flex-grow mx-8 bg-outline-variant/30"></div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">west</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">east</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Alpine Majesty -->
+<div class="card-3d-hover bg-surface-container rounded-xl overflow-hidden transition-all duration-300 midnight-glow">
+<img alt="Alpine Majesty" class="w-full h-64 object-cover" data-alt="Snow covered Swiss mountain peaks at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT21n2lVt04_u4y0eKYAUSCwFlZhsOXecpBUNaQQKS6DB9U-uH1H3CYapEeDcVX56lk8YLUY7wlU-DLH9LqPiP15Jnebuu9LhJbKYHsQ8bF2H2JUxXWS11W7Dvjo15ogtELGAQZ73FAbgbcoE1Z2rb7kpV4hOUUo_riiIIS-w91utPwUyNiiUHhpjK_pFxArnlAjD22hbR_Erg6W0vpUNqH3XVNm_mPzS58OOXLAmgqdCmiRjOc4ZhOGMC0hLv9qyb3e9yDl7sr2go"/>
+<div class="p-8">
+<h4 class="font-headline text-2xl mb-2">Alpine Majesty</h4>
+<p class="text-on-surface-variant text-sm mb-6 font-light leading-relaxed">The pinnacle of European winter luxury across the Swiss and Italian Alps.</p>
+<div class="flex justify-between items-center">
+<span class="text-[#D4AF37] font-bold tracking-tight text-xl">$15,200</span>
+<button class="text-on-surface border border-outline-variant/30 px-4 py-2 text-xs uppercase tracking-widest hover:border-primary hover:text-primary transition-all">Details</button>
+</div>
+</div>
+</div>
+<!-- Australian Odyssey -->
+<div class="card-3d-hover bg-surface-container rounded-xl overflow-hidden transition-all duration-300 midnight-glow">
+<img alt="Australian Odyssey" class="w-full h-64 object-cover" data-alt="Aerial view of the Great Barrier Reef" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Y4C--8tkaEbvxiV9y_o_YWlEYXSDiGnMZfqcZMNl94Ld0XBZ3MLPeuhdrV1qwCQfk0OpEIWClMic73UfSrR31og2mg_0mLSNRfD-o912NZOHnvpN8uFdgqtvQJxAfQWy2F3kWfC440VQa7rnK7V4y5rHNdizCgFIHVo93kI2uvjbV7jNHhrLIIgy0fCp8aiEGbn8r_ulxAIwFP4-CMkrs2_uB7W29EF47Anwc_soDATMKIlQxUHleCU0XJ-ds_WuAxgDbi5f_vqB"/>
+<div class="p-8">
+<h4 class="font-headline text-2xl mb-2">Australian Odyssey</h4>
+<p class="text-on-surface-variant text-sm mb-6 font-light leading-relaxed">From the Red Centre to the coral labyrinths of the Great Barrier Reef.</p>
+<div class="flex justify-between items-center">
+<span class="text-[#D4AF37] font-bold tracking-tight text-xl">$11,500</span>
+<button class="text-on-surface border border-outline-variant/30 px-4 py-2 text-xs uppercase tracking-widest hover:border-primary hover:text-primary transition-all">Details</button>
+</div>
+</div>
+</div>
+<!-- Amalfi Elegance -->
+<div class="card-3d-hover bg-surface-container rounded-xl overflow-hidden transition-all duration-300 midnight-glow">
+<img alt="Amalfi Elegance" class="w-full h-64 object-cover" data-alt="Colorful houses on the Amalfi Coast cliffs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYnSObwS1C9Y7jcePFldouBfT0S4OXUnr8jGq3t8G_NcijqeUpZDTNZ1SPxfg5i5SK4vWKKdXL8PVGh4ArM6NIYjqlZ26HPYmqwBTQb03RF29OxGnrEV3V65ou9H8i6Vea_GCBxiRwSQvNd6JuaYpO6rteNyIfFPexauQwpD6gxw6QcpD9BFp6gT53bV8okWZ8dIK6cQLU6vUb8cEMZK8uoYFJhSvFefKITituDJu3dxhYJNejVL2MjdsQjNmd_1RebN5GcVncupAJ"/>
+<div class="p-8">
+<h4 class="font-headline text-2xl mb-2">Amalfi Elegance</h4>
+<p class="text-on-surface-variant text-sm mb-6 font-light leading-relaxed">Coastal sophistication, private yacht charters, and Michelin-starred dining.</p>
+<div class="flex justify-between items-center">
+<span class="text-[#D4AF37] font-bold tracking-tight text-xl">$13,900</span>
+<button class="text-on-surface border border-outline-variant/30 px-4 py-2 text-xs uppercase tracking-widest hover:border-primary hover:text-primary transition-all">Details</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bespoke Customization Section -->
+<section class="mx-12 py-24 px-12 rounded-2xl bg-surface-container-low overflow-hidden relative group">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<filter id="noise">
+<feturbulence basefrequency="0.65" numoctaves="3" stitchtiles="stitch" type="fractalNoise"></feturbulence>
+</filter>
+<rect filter="url(#noise)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+<div>
+<span class="font-label text-sm uppercase tracking-[0.3em] text-primary mb-6 block">Beyond the Ordinary</span>
+<h2 class="font-headline text-5xl mb-8 leading-tight">Bespoke Customization</h2>
+<p class="text-on-surface-variant text-lg mb-12 font-light leading-relaxed">
+                        For those who demand a journey tailored to their exact frequency. Our curators will craft an itinerary that begins at your doorstep and ends wherever your imagination dictates.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="gold-gradient text-on-primary font-label text-sm uppercase tracking-widest px-10 py-4 rounded font-bold hover:scale-105 transition-all">Consult a Curator</button>
+<button class="border border-outline-variant text-on-surface font-label text-sm uppercase tracking-widest px-10 py-4 rounded hover:bg-surface-container transition-all">Download Portfolio</button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full"></div>
+<img alt="Private Jet Interior" class="rounded-xl relative z-10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="Sleek interior of a luxury private jet cabin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq8rVquzAmWQQR1SwP3h1IEzQuUQ9mEsJuANjg9WF9MALjNOYlRy0CqEglRA7GVv82PlrhVifMiTEU9bbiUQSf0dU3Rmu5Y6RQRyRpXuYNbKQ2nMSLNpdWEl2dzYLES50X7nJ3_mwI3Cnjrl3-sQ0zpeM7vLjRwA7RpAP5Q9Ge61DVpzt_H6gugUpY-Ph2VGQgnME6XZ6fu3UfldcojvpHRiWHzBDQDPXBo45JXmYruWvtoq2ZBrU6WN2jkwwXeNoi57uTlNIH93Je"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full border-t border-[#4D4635]/15 bg-[#0E0E0E] dark:bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-16 py-20 w-full">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-serif text-[#F2CA50] uppercase tracking-tighter mb-8">
+                    Midnight Curator
+                </div>
+<p class="text-[#D0C5AF]/70 font-light text-sm leading-relaxed max-w-xs">
+                    Curating moments of profound luxury and cinematic adventure across the globe since 2012.
+                </p>
+</div>
+<div>
+<h5 class="font-noto-serif text-[#D4AF37] mb-6 text-lg">Services</h5>
+<ul class="space-y-4">
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 block text-sm" href="#">Private Aviation</a></li>
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 block text-sm" href="#">Estate Curation</a></li>
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 block text-sm" href="#">Concierge Services</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-noto-serif text-[#D4AF37] mb-6 text-lg">Information</h5>
+<ul class="space-y-4">
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 block text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 block text-sm" href="#">Terms of Service</a></li>
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 block text-sm" href="#">FAQ</a></li>
+<li><a class="text-[#D0C5AF]/70 hover:text-[#D4AF37] hover:translate-x-1 transition-all duration-300 block text-sm" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-noto-serif text-[#D4AF37] mb-6 text-lg">Contact</h5>
+<p class="text-[#D0C5AF]/70 text-sm mb-4">Inquiries: curator@midnight.com</p>
+<div class="flex gap-4 mt-6">
+<span class="material-symbols-outlined text-[#D4AF37] cursor-pointer hover:scale-110 transition-transform">public</span>
+<span class="material-symbols-outlined text-[#D4AF37] cursor-pointer hover:scale-110 transition-transform">mail</span>
+<span class="material-symbols-outlined text-[#D4AF37] cursor-pointer hover:scale-110 transition-transform">chat</span>
+</div>
+</div>
+</div>
+<div class="px-16 py-8 border-t border-[#4D4635]/10 text-center">
+<p class="text-[#D0C5AF]/40 text-xs font-label uppercase tracking-widest">
+                © 2024 Midnight Curator Travel. All rights reserved.
+            </p>
+</div>
+</footer>
+</body></html>
