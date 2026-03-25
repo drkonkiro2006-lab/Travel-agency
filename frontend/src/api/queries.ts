@@ -4,6 +4,7 @@ export type Destination = {
   id: string;
   name: string;
   country: string;
+  region: 'Europe' | 'Asia Pacific' | 'Mediterranean' | 'Other';
   image: string;
   type: string;
   spanType: 'large' | 'small' | 'wide' | 'tall';

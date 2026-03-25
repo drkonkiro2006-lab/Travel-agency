@@ -1,4 +1,8 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { packages } from '../data/packages';
+import type { TravelPackage } from '../data/types';
+import { getSafeImage, handleImageError } from '../utils/imageFallback';
 
 export default function Home() {
   const fadeUp = {
@@ -35,9 +39,9 @@ export default function Home() {
             Experience bespoke travel curation that blends deep immersion with uncompromising luxury. Your journey starts where the ordinary ends.
           </motion.p>
           <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center justify-center gap-6">
-            <button className="gold-gradient text-text-on-accent px-10 py-4 font-bold uppercase tracking-widest text-sm rounded-md shadow-2xl hover:scale-105 transition-transform duration-300 beveled-edge">
+            <Link to="/packages" className="gold-gradient text-text-on-accent px-10 py-4 font-bold uppercase tracking-widest text-sm rounded-md shadow-2xl hover:scale-105 transition-transform duration-300 beveled-edge">
               View Collections
-            </button>
+            </Link>
             <button className="text-text hover:bg-surface-low px-10 py-4 font-bold uppercase tracking-widest text-sm rounded-md transition-all duration-300">
               Discover More
             </button>
@@ -67,7 +71,7 @@ export default function Home() {
                 <span className="text-accent font-label uppercase tracking-widest text-xs mb-3 block shadow-black drop-shadow-md">Europe Boutique</span>
                 <h3 className="text-4xl font-noto-serif text-white mb-4">Midnight in London</h3>
                 <p className="text-gray-300 max-w-lg mb-6">Experience the private clubs and hidden alleys of the historic capital.</p>
-                <a className="inline-flex items-center gap-3 text-accent uppercase font-bold text-xs tracking-widest hover:gap-5 transition-all" href="#">Explore <span className="material-symbols-outlined text-sm">arrow_forward</span></a>
+                <Link className="inline-flex items-center gap-3 text-accent uppercase font-bold text-xs tracking-widest hover:gap-5 transition-all" to="/packages/city-breaks">Explore <span className="material-symbols-outlined text-sm">arrow_forward</span></Link>
               </div>
             </motion.div>
             {/* Vertical Card */}
@@ -109,33 +113,38 @@ export default function Home() {
               <span className="font-label text-accent uppercase tracking-[0.2em] text-xs mb-2 block">Exclusive Access</span>
               <h2 className="font-noto-serif text-5xl font-bold text-text max-w-lg">Curated Itineraries</h2>
             </div>
-            <button className="border border-text/30 px-8 py-3 rounded-md text-sm uppercase font-bold tracking-widest hover:bg-surface-low transition-all">View All Journeys</button>
+            <Link to="/packages" className="border border-text/30 px-8 py-3 rounded-md text-sm uppercase font-bold tracking-widest hover:bg-surface-low transition-all">
+              View All Journeys
+            </Link>
           </motion.div>
           <motion.div 
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={staggerContainer}
             className="grid grid-cols-1 md:grid-cols-3 gap-12"
           >
-            {[1, 2, 3].map((item) => (
-              <motion.div variants={fadeUp} key={item} className="group bg-surface-low dark:dark-depth border border-text/10 p-8 rounded-xl dark-glow scale-interaction relative overflow-hidden transition-colors duration-300 shadow-xl">
+            {packages.slice(0, 3).map((pkg: TravelPackage) => (
+              <motion.div variants={fadeUp} key={pkg.id} className="group bg-surface-low dark:dark-depth border border-text/10 p-8 rounded-xl dark-glow scale-interaction relative overflow-hidden transition-colors duration-300 shadow-xl">
                 <div className="mb-8 overflow-hidden rounded-lg aspect-square">
-                  <img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt={`Itinerary ${item}`} src={
-                    item === 1 ? "https://lh3.googleusercontent.com/aida-public/AB6AXuA5grzVd71qEoTYcTf4BtyX_WeSizLhBrGPjL1Y5pcBIG1seVjSgNjYpCyLo8v6TvFoPYWxhk3FQmvpp_FAuNiadhbR1YPDM_lZKKb7gSW3wqzJDbFn8hfw779oGkMfySuFKfF5hlH_VzwomX_7y0H-JDV7ooWV4k5U5Fa9B4f23BZVk2yvLAq3TQFQFCFRcFIMIaRrMUI0ecLKZuWLyEupy176B6p0CAeN01Rw9UhjV-y4Fgoy5xIfhKYam3x5qtv-7XpaC7wIXCXa" :
-                    item === 2 ? "https://lh3.googleusercontent.com/aida-public/AB6AXuCs0W17TyWxDVVuff1R8NVQ1s9XA7XPRL65CVtucQo-1JiNF8uwyy47aSehsz66AMwefBhCeEoV6nnMp83DEXeOb5pKqmd0BakcITHf-lu8dvI5FxVRUzTWnLtopSQQr6lsBsBEMHb_mfYk-hLy18FXjfIBXR6mb6mmMAelYBbiUEdwoWvVbg5Xb3p_pKvJnQ-XrHS9Py8cGm6oSk3VpS2s5--Z6kKqSFf_sn7rQaTpu_kpw9FQdBL070AlRZ10RYI9eXpzyqsincGT" :
-                    "https://lh3.googleusercontent.com/aida-public/AB6AXuCyJVNk9MrrVCUHODxRxDZbzqEbycmNwpPS0bDh0O3eb6qGyFa1fVjtiaTBlSouC60Y6c-HkadHHeLmyZPMm0jSUXYlaZSzB07SwXXQYsETDfOw-6MPvfMFYJu-t73EqaMi5jMSyoOrZCCf9fEfdWxe9E0jIZ55Ydijn5jpNXJQA9-GjEtymFuhAHNFbgjsDCYoV10PGZvMVKkGap9FnI0rTffjvAW7swWQpWHusPwK6IZFqRzxTEqkB4w_b2uvos67bpXhimbxT6DM"
-                  } />
+                  <img 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                    alt={pkg.title} 
+                    src={getSafeImage(pkg.heroImage, pkg.category)}
+                    onError={(e) => handleImageError(e, pkg.category)}
+                  />
                 </div>
                 <div className="flex justify-between items-start mb-4">
-                  <h4 className="font-noto-serif text-2xl text-text">
-                    {item === 1 ? "The Pearl of Indochina" : item === 2 ? "Alpine Solitude" : "Amazonian Mystery"}
+                  <h4 className="font-noto-serif text-2xl text-text leading-tight">
+                    {pkg.title}
                   </h4>
-                  <span className="text-primary font-bold">{item === 1 ? "14 Days" : item === 2 ? "8 Days" : "10 Days"}</span>
+                  <span className="text-primary font-bold whitespace-nowrap ml-4">{pkg.duration}</span>
                 </div>
-                <p className="text-text/70 font-body mb-8 leading-relaxed">
-                  {item === 1 ? "A deep dive into the spirituality of Southeast Asia through private villa stays and guided meditation." : item === 2 ? "High-altitude luxury combined with heli-skiing and private observatory sessions under clear skies." : "Journey into the heart of the rainforest aboard a luxury river cruiser with world-renowned naturalists."}
+                <p className="text-text/70 font-body mb-8 leading-relaxed line-clamp-3">
+                  {pkg.description}
                 </p>
-                <div className="flex items-center justify-between border-t border-text/15 pt-6">
-                  <span className="text-sm font-label uppercase tracking-widest opacity-60">From ${item === 1 ? "12,500" : item === 2 ? "9,200" : "15,800"}</span>
-                  <button className="material-symbols-outlined text-accent group-hover:translate-x-2 transition-transform">east</button>
+                <div className="flex items-center justify-between border-t border-text/15 pt-6 relative z-20">
+                  <span className="text-sm font-label uppercase tracking-widest opacity-60">From ${pkg.price}</span>
+                  <Link to={`/packages/${pkg.category}/${pkg.slug}`} className="material-symbols-outlined text-accent group-hover:translate-x-2 transition-transform cursor-pointer">
+                    east
+                  </Link>
                 </div>
               </motion.div>
             ))}
