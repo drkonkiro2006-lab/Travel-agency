@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 
 type User = {
@@ -8,11 +8,16 @@ type User = {
   role: 'user' | 'admin';
 };
 
+type Theme = 'light' | 'dark';
+
 type AuthContextType = {
   user: User | null;
   isAuthenticated: boolean;
   login: (token: string, userData: User) => void;
   logout: () => void;
+  // --- Added Theme Types ---
+  theme: Theme;
+  toggleTheme: () => void;
 };
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -20,10 +25,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(() => {
     const storedUser = localStorage.getItem('saas_user');
-    if (!storedUser) {
-      return null;
-    }
-
+    if (!storedUser) return null;
     try {
       return JSON.parse(storedUser) as User;
     } catch {
@@ -32,6 +34,26 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       return null;
     }
   });
+
+  // --- Theme Logic ---
+  const [theme, setTheme] = useState<Theme>(() => {
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    return savedTheme || 'light';
+  });
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
 
   const login = (token: string, userData: User) => {
     localStorage.setItem('saas_token', token);
@@ -46,7 +68,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated: !!user, login, logout }}>
+    <AuthContext.Provider 
+      value={{ 
+        user, 
+        isAuthenticated: !!user, 
+        login, 
+        logout,
+        theme,        // Exporting theme
+        toggleTheme   // Exporting toggle function
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
