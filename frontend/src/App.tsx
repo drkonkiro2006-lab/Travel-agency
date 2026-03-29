@@ -8,6 +8,7 @@ import ScrollToTop from './components/layout/ScrollToTop';
 // Public Pages
 import Home from './pages/Home';
 import About from './pages/About';
+import Explore from './pages/Explore';
 import Contact from './pages/Contact';
 import Destinations from './pages/Destinations';
 import PackageDetail from './pages/PackageDetail';
@@ -40,6 +41,7 @@ function App() {
         }>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/explore" element={<Explore />} />
           <Route path="/destinations" element={<Destinations />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/book-now" element={<Contact />} />
